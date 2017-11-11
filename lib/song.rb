@@ -35,18 +35,18 @@ class Song
     end
   end
   genre_hash
-      #   if genre_hash.has_key?(genre)
-      #     genre.values.include?(genre)
-      #     # genre_hash.update(genre_hash) {|genre, value| value += 1}
-      #   else
-      #     genre_hash[genre] = 1
-      #   end
-      # end
-
-    # genre_hash
-
   end
 
-
+  def self.artist_count
+    artist_hash = {}
+    @@artists.each do |artist|
+      if artist_hash[artist]
+        artist_hash[artist] += 1
+    else
+      artist_hash[artist] = 1
+    end
+  end
+  artist_hash
+  end
 
 end
